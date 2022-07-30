@@ -4,6 +4,7 @@ CHANGELOG
 UNRELEASED
 ----------
 
+* 🎉 feat: HeaderCartButton component added
 * 🎉 feat: header component added
 * 🎉 feat: tailwind added
 

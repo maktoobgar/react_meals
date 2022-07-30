@@ -1,17 +1,7 @@
-/* Header Section */
 .header {
-	@apply fixed flex px-6 pt-10 pb-5 w-full bg-amber-600 rounded-b-lg;
+	@apply fixed items-center flex px-6 pt-10 pb-5 w-full bg-amber-600 rounded-b-lg;
 }
 
 .header-title {
-	@apply text-6xl capitalize;
+	@apply text-4xl sm:text-5xl capitalize;
 }
-
-.header-button {
-	/* Button */
-	@apply inline-flex items-center px-4 py-2 mt-2 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-black border rounded-lg text-lg md:mt-0 hover:text-black hover:bg-white focus:shadow-md focus:shadow-black;
-	/* Extra */
-	@apply capitalize whitespace-nowrap;
-}
-
-/* End Of Header Section */

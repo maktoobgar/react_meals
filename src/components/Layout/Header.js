@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import HeaderCartButton from "./HeaderCartButton";
 
 const Header = () => {
 	return (
@@ -6,7 +7,7 @@ const Header = () => {
 			<div className="w-full">
 				<h1 className={styles["header-title"]}>restaurant meals</h1>
 			</div>
-			<button className={styles["header-button"]}>press me</button>
+			<HeaderCartButton />
 		</header>
 	);
 };
