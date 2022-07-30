@@ -4,6 +4,7 @@ CHANGELOG
 UNRELEASED
 ----------
 
+* 🐛 fix: making meals responsive
 * 🐛 fix: config tailwind and fix being responsive in lower res
 * 🎉 feat: MealItem component added
 * 🎉 feat: added a responsive text for list of foods
