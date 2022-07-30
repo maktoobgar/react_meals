@@ -12,6 +12,7 @@ img {
 }
 
 body {
+	@apply bg-stone-800;
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
 		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -19,21 +20,3 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-.button {
-	/* Button */
-	@apply inline-flex items-center px-4 py-2 mt-2 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-black border rounded-lg text-lg md:mt-0 hover:text-black hover:bg-white focus:shadow-md;
-	/* Extra */
-	@apply capitalize whitespace-nowrap;
-}
-
-/* Header Section */
-.header {
-	@apply fixed flex px-6 pt-10 pb-5 w-full bg-amber-600 rounded-b-lg;
-}
-
-.header-title {
-	@apply text-6xl capitalize;
-}
-
-/* End Of Header Section */
