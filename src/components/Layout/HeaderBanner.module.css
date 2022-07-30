@@ -1,0 +1,4 @@
+.header-banner {
+	height: 500px;
+	@apply overflow-hidden;
+}

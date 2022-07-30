@@ -50,4 +50,9 @@ body {
 	bottom: 11px;
 }
 
+.header-banner {
+	height: 500px;
+	@apply overflow-hidden;
+}
+
 /* End Of Header Section */
