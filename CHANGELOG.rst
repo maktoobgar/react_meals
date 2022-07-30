@@ -4,6 +4,7 @@ CHANGELOG
 UNRELEASED
 ----------
 
+* 🎉 feat: added button on meals
 * 🐛 fix: making meals responsive
 * 🐛 fix: config tailwind and fix being responsive in lower res
 * 🎉 feat: MealItem component added

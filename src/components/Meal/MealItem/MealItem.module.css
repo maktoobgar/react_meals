@@ -1,7 +1,7 @@
 .meal {
 	border-bottom-width: 1px;
 	border-bottom-color: rgba(165, 93, 0, 0.452);
-	@apply flex mt-3 py-2 first:mt-0 first:pt-0 last:border-b-0 last:pb-0;
+	@apply flex mt-3 py-2 first:mt-0 first:pt-0 last:border-b-0 last:pb-0 items-center;
 }
 
 .meal-text-section {
