@@ -56,3 +56,29 @@ body {
 }
 
 /* End Of Header Section */
+
+/* Title */
+
+.list-title {
+	/* for p elements inside it */
+	@apply text-center;
+	/* for styling */
+	@apply flex relative justify-center mb-5;
+	min-height: 100px;
+}
+
+.list-title > div {
+	/* border */
+	@apply border rounded-lg border-stone-800 py-10 px-10;
+	/* put it more up top */
+	@apply absolute;
+	top: -10rem;
+	/* styling */
+	@apply text-xl space-y-2 bg-stone-900 text-white;
+}
+
+.list-title h1 {
+	@apply text-5xl mb-6 capitalize;
+}
+
+/* End Of Title */

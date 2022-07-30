@@ -1,0 +1,30 @@
+.list-title {
+	/* for p elements inside it */
+	@apply text-center;
+	/* for styling */
+	@apply flex relative justify-center mb-5;
+	min-height: 8rem;
+}
+
+.list-title > div {
+	/* border */
+	@apply border rounded-lg border-stone-800 py-10 px-7 m-5;
+	/* put it more up top */
+	@apply absolute;
+	top: -9rem;
+	/* styling */
+	@apply space-y-2 bg-stone-900 text-white;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.527);
+}
+
+.list-title p {
+	@apply text-sm first-letter:uppercase;
+	/* responsive */
+	@apply sm:text-lg lg:text-xl;
+}
+
+.list-title h1 {
+	@apply text-2xl mb-8 capitalize;
+	/* responsive */
+	@apply sm:text-3xl lg:text-5xl;
+}

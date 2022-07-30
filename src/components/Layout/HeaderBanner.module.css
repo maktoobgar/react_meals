@@ -2,3 +2,8 @@
 	height: 500px;
 	@apply overflow-hidden;
 }
+
+.header-banner > img {
+	width: auto;
+	min-height: 100%;
+}
