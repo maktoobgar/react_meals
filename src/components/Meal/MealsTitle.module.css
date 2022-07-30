@@ -20,7 +20,7 @@
 .list-title p {
 	@apply text-sm first-letter:uppercase;
 	/* responsive */
-	@apply sm:text-lg lg:text-xl;
+	@apply lg:text-lg xl:text-xl;
 }
 
 .list-title h1 {

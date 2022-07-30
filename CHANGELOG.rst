@@ -4,6 +4,7 @@ CHANGELOG
 UNRELEASED
 ----------
 
+* 🎉 feat: MealItem component added
 * 🎉 feat: added a responsive text for list of foods
 * 🎉 feat: added a background pic
 * 🎉 feat: HeaderCartButton component added

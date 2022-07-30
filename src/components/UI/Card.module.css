@@ -1,0 +1,9 @@
+.card {
+	@apply flex m-5 justify-center;
+}
+
+.card > div {
+	@apply p-5 border rounded-lg bg-white;
+	max-width: 1270px;
+	width: 100%;
+}
