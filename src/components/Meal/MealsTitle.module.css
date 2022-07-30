@@ -18,13 +18,13 @@
 }
 
 .list-title p {
-	@apply text-sm first-letter:uppercase;
+	@apply text-xs first-letter:uppercase;
 	/* responsive */
-	@apply lg:text-lg xl:text-xl;
+	@apply xs:text-sm lg:text-lg xl:text-xl;
 }
 
 .list-title h1 {
-	@apply text-2xl mb-8 capitalize;
+	@apply text-lg mb-8 capitalize;
 	/* responsive */
-	@apply sm:text-3xl lg:text-5xl;
+	@apply xs:text-xl sm:text-3xl lg:text-5xl;
 }
