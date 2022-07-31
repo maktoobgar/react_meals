@@ -1,5 +1,5 @@
 .header {
-	@apply fixed items-center flex px-6 pt-10 pb-5 w-full bg-amber-600 rounded-b-lg z-50;
+	@apply fixed items-center flex px-6 pt-10 pb-5 w-full bg-amber-600 rounded-b-lg z-10;
 	box-shadow: 0 0 2rem black;
 }
 

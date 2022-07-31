@@ -1,0 +1,12 @@
+.backdrop {
+	@apply fixed w-screen h-screen inset-0;
+	background-color: rgba(114, 91, 62, 0.63);
+}
+
+.overlay-content {
+	@apply flex fixed w-screen h-screen inset-0 z-50 items-center justify-center;
+}
+
+.overlay-actual-content {
+	@apply fixed;
+}

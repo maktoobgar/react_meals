@@ -1,0 +1,72 @@
+.cart {
+	@apply bg-white rounded-lg p-5 m-5;
+	min-width: 90vw;
+}
+
+/* responsive */
+/* xs */
+@media (min-width: 475px) {
+	.cart {
+		min-width: 80vw;
+	}
+}
+
+/* sm */
+@media (min-width: 640px) {
+	.cart {
+		min-width: 70vw;
+	}
+}
+
+/* lg */
+@media (min-width: 1024px) {
+	.cart {
+		min-width: 60vw;
+	}
+}
+
+/* xl */
+@media (min-width: 1280px) {
+	.cart {
+		min-width: 50vw;
+	}
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+	.cart {
+		min-width: 40vw;
+	}
+}
+/* end of responsive */
+
+.total {
+	@apply flex mt-5 mb-3 font-semibold text-2xl;
+}
+
+.total > span {
+	@apply first:w-full first:text-left last:text-right;
+}
+
+.buttons {
+	@apply flex;
+}
+
+.buttons > button {
+	@apply w-1/2;
+	@apply first:ml-0 last:mr-0;
+}
+
+.button {
+	/* template */
+	@apply py-2 mx-2 text-center;
+	/* styles */
+	background-color: #8d640c;
+	@apply text-xs font-semibold rounded-lg text-white cursor-pointer capitalize;
+	/* responsive */
+	@apply text-xs xs:text-sm sm:text-lg;
+}
+
+.item {
+	@apply text-lg font-medium;
+}
