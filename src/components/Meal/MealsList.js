@@ -33,6 +33,7 @@ const MealsList = () => {
 	const data = meals.map((element) => {
 		return (
 			<MealItem
+				id={element.id}
 				key={element.id}
 				name={element.name}
 				description={element.description}

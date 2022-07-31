@@ -4,6 +4,7 @@ CHANGELOG
 UNRELEASED
 ----------
 
+* 🎉 feat: add function works fine
 * 🎉 feat: Cart module shows and hides by events
 * 🎉 feat: Cart module added
 * 🎉 feat: added button on meals

@@ -1,22 +1,23 @@
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 import Overlay from "../UI/Overlay";
 import styles from "./Cart.module.css";
 
 const Cart = (props) => {
-	const items = [
-		{ id: "0", name: "sushi", amount: 2, price: 12.2 },
-		{ id: "1", name: "dick", amount: 1, price: 14.0 },
-	];
-	const cartItems = (
-		<ul>
-			{items.map((element) => {
-				return (
-					<li key={element.id} className={styles.item}>
-						{element.name}
-					</li>
-				);
-			})}
-		</ul>
-	);
+	const ctx = useContext(CartContext);
+
+	let items = [];
+	for (const key in ctx.items) {
+		const element = ctx.items[key];
+		const item = (
+			<li id={element.id} key={element.id} className={styles.item}>
+				{element.name}
+			</li>
+		);
+		items = [...items, item];
+	}
+
+	const cartItems = <ul>{items}</ul>;
 
 	return (
 		<Overlay onBackdropClick={props.hideCart}>
