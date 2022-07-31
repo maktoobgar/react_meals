@@ -5,13 +5,13 @@ import { Fragment } from "react";
 const overlayElement = document.getElementById("overlay");
 
 const Backdrop = (props) => {
-	return <div className={styles.backdrop} />;
+	return <div className={styles.backdrop} onClick={props.onBackdropClick} />;
 };
 
 const Content = (props) => {
 	return (
 		<div className={styles["overlay-content"]}>
-			<Backdrop />
+			<Backdrop onBackdropClick={props.onBackdropClick} />
 			<div className={styles["overlay-actual-content"]}>{props.children}</div>
 		</div>
 	);
@@ -20,7 +20,12 @@ const Content = (props) => {
 const Overlay = (props) => {
 	return (
 		<Fragment>
-			{createPortal(<Content>{props.children}</Content>, overlayElement)}
+			{createPortal(
+				<Content onBackdropClick={props.onBackdropClick}>
+					{props.children}
+				</Content>,
+				overlayElement
+			)}
 		</Fragment>
 	);
 };
