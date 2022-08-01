@@ -4,6 +4,7 @@ CHANGELOG
 UNRELEASED
 ----------
 
+* 🎉 feat: cart button bounces when items added or removed
 * 🎉 feat: added cart module items and change amount functionality
 * 🎉 feat: add function works fine
 * 🎉 feat: Cart module shows and hides by events
