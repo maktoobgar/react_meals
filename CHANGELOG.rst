@@ -4,6 +4,7 @@ CHANGELOG
 UNRELEASED
 ----------
 
+* 🐛 fix(README): added a missing word in commands of how to host section
 * 🎉 feat: added docs and guids to host it all
 * 🎉 feat: cart button bounces when items added or removed
 * 🎉 feat: added cart module items and change amount functionality

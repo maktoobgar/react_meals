@@ -6,7 +6,7 @@ This repository is a practice project just to practice on my react.js skills.
 
 1. `npm install`
 2. `npm run build`
-3. `docker compose up`
+3. `docker compose up -d`
 4. Add this config to a new file in `sites-available` folder of nginx(which exists in `/etc/nginx/sites-available` address):
    * ```
      <!-- /etc/nginx/sites-available/restaurant.maktoobgar.ir.conf -->
