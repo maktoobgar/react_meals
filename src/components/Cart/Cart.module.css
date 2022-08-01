@@ -1,6 +1,13 @@
 .cart {
 	@apply bg-white rounded-lg p-5 m-5;
 	min-width: 90vw;
+	/* animation */
+	@apply ease-out transition-all;
+	animation: "transitionIn" 0.5s;
+}
+
+.fadeIn {
+	animation: "fadeTransitionIn" 0.5s;
 }
 
 /* responsive */

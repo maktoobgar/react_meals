@@ -22,11 +22,13 @@ export const CartContextProvider = (props) => {
 	};
 
 	const removeItem = (id) => {
-		setItems(
-			items.filter((element) => {
-				return element.id !== id;
-			})
-		);
+		const newItems = Object.keys(items)
+			.filter((key) => key !== id.toString())
+			.reduce((obj, key) => {
+				obj[key] = items[key];
+				return obj;
+			}, {});
+		setItems(newItems);
 	};
 
 	const replaceItem = (item) => {

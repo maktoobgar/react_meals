@@ -17,7 +17,7 @@ const meals = [
 	},
 	{
 		id: 2,
-		name: "urban yogurt",
+		name: "rural yogurt",
 		description: "natural yogurt from Iran",
 		price: 15,
 	},
@@ -43,7 +43,7 @@ const MealsList = () => {
 	});
 
 	return (
-		<Card className={styles["important-mt-10"]}>
+		<Card className={`${styles["important-mt-10"]} ${styles["fadeIn"]}`}>
 			<ul>{data}</ul>
 		</Card>
 	);

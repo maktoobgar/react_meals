@@ -1,6 +1,0 @@
-.responsive-form-element {
-	width: 3.125rem;
-	@apply xs:w-14 sm:w-16;
-	/* responsible */
-	@apply text-xs xs:text-sm sm:text-lg;
-}

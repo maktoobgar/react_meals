@@ -1,0 +1,32 @@
+.button {
+	/* template */
+	@apply py-2 text-center;
+	/* styles */
+	background-color: #8d640c;
+	@apply text-xs font-semibold rounded-lg text-white cursor-pointer capitalize;
+	/* responsive */
+	@apply text-xs xs:text-sm sm:text-lg;
+}
+
+/* animations */
+@keyframes transitionIn {
+	from {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeTransitionIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

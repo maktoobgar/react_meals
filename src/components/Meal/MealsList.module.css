@@ -1,3 +1,7 @@
 .important-mt-10 {
 	margin-top: 2.5rem !important;
 }
+
+.fadeIn {
+	animation: "transitionIn" 0.5s;
+}
