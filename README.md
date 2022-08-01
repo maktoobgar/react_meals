@@ -1,74 +1,46 @@
 # About This Repository
 
-This repository is a practice project just to practice on my reactjs skills.
+This repository is a practice project just to practice on my react.js skills.
 
-# Getting Started
+# How To Host?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. `npm install`
+2. `npm run build`
+3. `docker compose up`
+4. Add this config to a new file in `sites-available` folder of nginx(which exists in `/etc/nginx/sites-available` address):
+   * ```
+     <!-- /etc/nginx/sites-available/restaurant.maktoobgar.ir.conf -->
 
-## Available Scripts
+     server {
+       listen 80;
+       listen [::]:80;
+       server_name restaurant.maktoobgar.ir;
 
-In the project directory, you can run:
+       location / {
+         proxy_pass http://127.0.0.1:3003;
+         proxy_http_version 1.1;
+         proxy_set_header Host $host;
+         proxy_set_header X-Forwarded-Host $server_name;
+         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+         proxy_set_header X-Real-IP $remote_addr;
+         proxy_set_header Upgrade $http_upgrade;
+         proxy_set_header Connection "upgrade";
+       }
+     }
+     ```
+5. Create link file:
+   * `sudo ln -s /etc/nginx/sites-available/restaurant.maktoobgar.ir.conf /etc/nginx/sites-enabled/restaurant.maktoobgar.ir.conf`
+6. Run `sudo nginx -t` to check if everything has gone right.
+7. Enjoy.
 
-### `npm start`
+**Note**: In my configs I have `restaurant.maktoobgar.ir` as my domain, if you want to run this on your servers, be sure to replace my domain with your own.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Main Page
 
-### `npm test`
+![](/images/demo.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cart
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![](/images/cart-demo.png)

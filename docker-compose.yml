@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  tea:
+    container_name: restaurnat-meals
+    image: nginx:alpine
+    restart: always
+    volumes:
+      - ./configs:/etc/nginx/conf.d
+      - ./build:/project
+    ports:
+      - 3003:80
