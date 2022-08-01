@@ -1,0 +1,27 @@
+.meal {
+	border-bottom-width: 1px;
+	border-bottom-color: rgba(165, 93, 0, 0.452);
+	@apply flex mt-3 py-2 first:mt-0 first:pt-0 last:border-b-0 last:pb-0 items-center;
+}
+
+.meal-text-section {
+	@apply w-full;
+}
+
+.meal-name {
+	@apply text-lg capitalize text-black pb-2;
+	/* responsible */
+	@apply xs:text-xl;
+}
+
+.meal-description {
+	@apply text-sm text-stone-400 first-letter:uppercase;
+	/* responsible */
+	@apply xs:text-lg sm:text-xl;
+}
+
+.meal-price {
+	@apply text-sm font-bold text-amber-600;
+	/* responsible */
+	@apply xs:text-lg;
+}

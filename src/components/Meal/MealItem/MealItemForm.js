@@ -8,7 +8,6 @@ const MealItemForm = (props) => {
 	const inputRef = useRef();
 
 	const addItem = () => {
-		console.log(props.id);
 		ctx.addItem({
 			id: props.id,
 			name: props.name,

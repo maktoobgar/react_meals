@@ -6,6 +6,7 @@ const CartContext = createContext({
 	totalAmount: 0,
 	addItem: (item) => {},
 	removeItem: (id) => {},
+	replaceItem: (item) => {},
 });
 
 export const CartContextProvider = (props) => {
@@ -28,6 +29,12 @@ export const CartContextProvider = (props) => {
 		);
 	};
 
+	const replaceItem = (item) => {
+		if (item.id in items) {
+			setItems({ ...items, [item.id]: item });
+		}
+	};
+
 	let totalPrice = 0;
 	let totalAmount = 0;
 	for (const key in items) {
@@ -44,6 +51,7 @@ export const CartContextProvider = (props) => {
 				totalAmount: totalAmount,
 				addItem: addItem,
 				removeItem: removeItem,
+				replaceItem: replaceItem,
 			}}
 		>
 			{props.children}

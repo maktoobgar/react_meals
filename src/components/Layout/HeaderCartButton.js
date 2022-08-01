@@ -9,7 +9,13 @@ const HeaderCartButton = (props) => {
 	return (
 		<button className={styles["header-button"]} onClick={props.showCart}>
 			<img src={cart} alt="" />
-			<p className={styles["header-number"]}>{ctx.totalAmount}</p>
+			<p
+				className={`${styles["header-number"]} ${
+					ctx.totalAmount > 9 && styles["header-number-double-digit"]
+				}`}
+			>
+				{ctx.totalAmount}
+			</p>
 		</button>
 	);
 };
